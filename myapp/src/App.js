@@ -5,17 +5,13 @@ import Test1 from './router/Test1';
 import styled from 'styled-components';
 
 const Rayout = styled.div`
-background: yellow;
 display: grid;
-gap: 10px;
 grid-template-columns: 1.5fr 8.5fr;
 `
 
 const RayoutContents = styled.div`
-background: yellow;
-/* display: flex;
-justify-content: center;
-align-items: center; */
+background: #fad8d6;
+padding: 3rem;
 `
 
 function App() {
