@@ -4,10 +4,11 @@ import Home from './router/Home';
 import Test1 from './router/Test1';
 import styled from 'styled-components';
 import DataLength from './router/DataLength';
+import Recycle from './router/Recycle';
 
 const Rayout = styled.div`
 display: grid;
-grid-template-columns: 1.5fr 8.5fr;
+grid-template-columns: 2fr 8fr;
 `
 
 const RayoutContents = styled.div`
@@ -35,6 +36,9 @@ function App() {
       <Route path="study1" element={<DataLength/>}/>
     </Routes>
 
+    <Routes>
+      <Route path="study2" element={<Recycle/>}/>
+    </Routes>
 
 
 
