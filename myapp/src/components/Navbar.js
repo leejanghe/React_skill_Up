@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 import styled from 'styled-components'
 
 const NavWrap = styled.div`
-background: #2e282a;
+background: #333C83;
 padding: 25px;
 display: flex;
 flex-direction: column;

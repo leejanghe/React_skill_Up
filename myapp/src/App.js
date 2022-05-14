@@ -11,8 +11,8 @@ grid-template-columns: 1.5fr 8.5fr;
 `
 
 const RayoutContents = styled.div`
-background: #fad8d6;
-padding: 3rem;
+background: #F9F3EE;
+padding: 2rem;
 `
 
 function App() {
