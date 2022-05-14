@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Home from './router/Home';
 import Test1 from './router/Test1';
 import styled from 'styled-components';
+import DataLength from './router/DataLength';
 
 const Rayout = styled.div`
 display: grid;
@@ -28,6 +29,15 @@ function App() {
     <Routes>
       <Route path="test1" element={<Test1/>}/>
     </Routes>
+
+    <Routes>
+      <Route path="study1" element={<DataLength/>}/>
+    </Routes>
+
+
+
+
+
       </RayoutContents>
     </Rayout>
     </Router>

@@ -21,7 +21,7 @@ function Navbar() {
         <NavWrap>
             <Link to="/">Home</Link>
             <Link to="/test1">test link</Link>
-            <Link to="/">Home</Link>
+            <Link to="/study1">데이터 길이</Link>
             <Link to="/">Home</Link>
             <Link to="/">Home</Link>
             <Link to="/">Home</Link>
