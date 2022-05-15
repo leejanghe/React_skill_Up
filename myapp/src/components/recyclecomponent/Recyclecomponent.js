@@ -18,6 +18,7 @@ function Recyclecomponent() {
     return (
         <div>
             <AlarmText text={text}/>
+            <br/>
             <AlarmText text={recycletext} pink/>
         </div>
     )

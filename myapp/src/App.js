@@ -5,6 +5,7 @@ import Test1 from './router/Test1';
 import styled from 'styled-components';
 import DataLength from './router/DataLength';
 import Recycle from './router/Recycle';
+import Classification from './router/Classification';
 
 const Rayout = styled.div`
 display: grid;
@@ -40,7 +41,9 @@ function App() {
       <Route path="study2" element={<Recycle/>}/>
     </Routes>
 
-
+    <Routes>
+      <Route path="study3" element={<Classification/>}/>
+    </Routes>
 
 
       </RayoutContents>
