@@ -20,13 +20,9 @@ function Navbar() {
     return (
         <NavWrap>
             <Link to="/">Home</Link>
-            <Link to="/test1">test link</Link>
             <Link to="/study1">데이터 길이</Link>
             <Link to="/study2">재사용컴포넌트</Link>
-            <Link to="/">Home</Link>
-            <Link to="/">Home</Link>
-            <Link to="/">Home</Link>
-            <Link to="/">Home</Link>
+            
         </NavWrap>
     )
 }

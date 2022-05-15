@@ -2,7 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 
 const AlarmWarpper = styled.div`
-background: #112B3C;
+/* background: #112B3C; */
+/* 포롭스를 통해 컬러 변경이 가능 */
+background: ${(props) => (props.pink ? "pink":"#112B3C;")};
 text-align: center;
 padding: 1rem;
 border-radius: 5px;
@@ -23,7 +25,7 @@ box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 function AlarmText({text}) {
     console.log(text[0].h1)
     return (
-        <AlarmWarpper>
+        <AlarmWarpper >
         {
             text.map((item,idx)=>{
                 return(
