@@ -21,6 +21,16 @@ function ClassificationPage() {
         {id:10, name:'messa',age:20,score:85,grades:'GOOD',result:'합격'},
     ])
 
+    const [pass, setPass] = useState([])
+    const [fail, setFail] = useState([])
+
+    const hanldeClick = () => {
+        const pass = data.filter(item => item.grades === 'GOOD')
+        const fail = data.filter(item => item.grades === 'BAD')
+        setPass(pass)
+        setFail(fail)
+    }
+
     const text = [{
         h1:'데이터 분류 하기',
         p:'데이터 기준에 따라 데이터를 분류하여 표현할 수 있습니다.'
@@ -31,6 +41,7 @@ function ClassificationPage() {
         <div>
             <AlarmText text={text}/>
             <h1>성적 평가</h1>
+            <button onClick={hanldeClick}>분류하기!</button>
             <table>
                 <thead>
                     <tr>
@@ -53,6 +64,62 @@ function ClassificationPage() {
                     ))}
                 </tbody>
             </table>
+            <div>
+                <h1>합격자</h1>
+                {
+                    pass.length === 0 ? <div>과연 결과는?</div> :
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>이름</th>
+                                <th>나이</th>
+                                <th>점수</th>
+                                <th>학점</th>
+                                <th>결과</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {pass.map(item => (
+                                <tr key={item.id}>
+                                    <td>{item.name}</td>
+                                    <td>{item.age}</td>
+                                    <td>{item.score}</td>
+                                    <td>{item.grades}</td>
+                                    <td>{item.result}</td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                }
+            </div>
+            <div>
+                <h1>불합격자</h1>
+                {
+                    fail.length === 0 ? <div>과연 결과는?</div> :
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>이름</th>
+                                <th>나이</th>
+                                <th>점수</th>
+                                <th>학점</th>
+                                <th>결과</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {fail.map(item => (
+                                <tr key={item.id}>
+                                    <td>{item.name}</td>
+                                    <td>{item.age}</td>
+                                    <td>{item.score}</td>
+                                    <td>{item.grades}</td>
+                                    <td>{item.result}</td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                }
+            </div>
         </div>
     )
 }
