@@ -1,4 +1,8 @@
 import React,{useState, useEffect} from 'react'
+import styled from 'styled-components'
+import AlarmText from '../../common/AlarmText'
+
+
 
 function ClassificationPage() {
 
@@ -17,9 +21,38 @@ function ClassificationPage() {
         {id:10, name:'messa',age:20,score:85,grades:'GOOD',result:'합격'},
     ])
 
+    const text = [{
+        h1:'데이터 분류 하기',
+        p:'데이터 기준에 따라 데이터를 분류하여 표현할 수 있습니다.'
+    }]
+
+
     return (
         <div>
-            준비중..!
+            <AlarmText text={text}/>
+            <h1>성적 평가</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>이름</th>
+                        <th>나이</th>
+                        <th>점수</th>
+                        <th>학점</th>
+                        <th>결과</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {data.map(item => (
+                        <tr key={item.id}>
+                            <td>{item.name}</td>
+                            <td>{item.age}</td>
+                            <td>{item.score}</td>
+                            <td>{item.grades}</td>
+                            <td>{item.result}</td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
         </div>
     )
 }
