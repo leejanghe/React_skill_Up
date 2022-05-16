@@ -1,6 +1,7 @@
 import React,{useEffect, useState} from 'react'
-import ReactPaginate from 'react-paginate'
+// import ReactPaginate from 'react-paginate'
 import axios from 'axios'
+
 
 function PaginatePage() {
 
@@ -16,6 +17,9 @@ function PaginatePage() {
             console.log(err)
         })
     }, [])
+
+
+
 
     console.log(posts)
     return (
