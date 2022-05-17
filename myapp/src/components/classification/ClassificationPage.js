@@ -76,6 +76,11 @@ function ClassificationPage() {
         setData([...sort])
     }
 
+    const handleClickSortName = () => {
+        const sort = data.sort((a,b) => a.name.localeCompare(b.name))
+        setData([...sort])
+    }
+
     const text = [{
         h1:'데이터 분류 하기',
         p:'데이터 기준에 따라 데이터를 분류하여 표현할 수 있습니다.'
@@ -90,6 +95,7 @@ function ClassificationPage() {
             <Button onClick={hanldeClickReset}>초기화하기!</Button>
             <Button reset onClick={handleClickSortSore}>점수 낮은순!</Button>
             <Button reset onClick={handleClickSortAge}>나이 적은순!</Button>
+            <Button reset onClick={handleClickSortName}>이름순!</Button>
             <WrapContents>
             <table>
                 <thead>

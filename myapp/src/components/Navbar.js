@@ -22,7 +22,7 @@ function Navbar() {
             <Link to="/">Home</Link>
             <Link to="/study1">데이터 길이</Link>
             <Link to="/study2">재사용컴포넌트</Link>
-            <Link to="/study3">데이터 분류</Link>
+            <Link to="/study3">데이터 분류 (정렬 기능)</Link>
             <Link to="/study4">페이지네이션</Link>
         </NavWrap>
     )
