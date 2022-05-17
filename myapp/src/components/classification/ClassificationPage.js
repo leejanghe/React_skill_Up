@@ -83,7 +83,7 @@ function ClassificationPage() {
 
     const text = [{
         h1:'데이터 분류 하기',
-        p:'데이터 기준에 따라 데이터를 분류하여 표현할 수 있습니다.'
+        p:'데이터 기준에 따라 데이터를 분류하여 표현할 수 있습니다.(정렬표함)'
     }]
     console.log(1,data)
 
