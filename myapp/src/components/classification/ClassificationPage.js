@@ -2,7 +2,37 @@ import React,{useState, useEffect} from 'react'
 import styled from 'styled-components'
 import AlarmText from '../../common/AlarmText'
 
+const Wrap = styled.div`
+display: grid;
+gap:20px;
+grid-template-columns: 1fr 1fr;
+table {
+    width: 100%;
+    border: 1px solid #444444;
+  }
+  th, td {
+    border: 1px solid #444444;
+  }
+`
 
+const WrapContents = styled.div`
+table {
+    width: 100%;
+    border: 1px solid #444444;
+  }
+  th, td {
+    border: 1px solid #444444;
+  }
+`
+
+const Button = styled.button`
+background: ${(props) => (props.reset ? "black" : "white")};
+color: ${(props) => (props.reset ? "white" : "black")};
+padding: 10px;
+margin-bottom: 5px;
+border-radius: 3px;
+margin-left: 10px;
+`
 
 function ClassificationPage() {
 
@@ -31,6 +61,11 @@ function ClassificationPage() {
         setFail(fail)
     }
 
+    const hanldeClickReset = () => {
+        setPass([])
+        setFail([])
+    }
+
     const text = [{
         h1:'데이터 분류 하기',
         p:'데이터 기준에 따라 데이터를 분류하여 표현할 수 있습니다.'
@@ -41,7 +76,9 @@ function ClassificationPage() {
         <div>
             <AlarmText text={text}/>
             <h1>성적 평가</h1>
-            <button onClick={hanldeClick}>분류하기!</button>
+            <Button onClick={hanldeClick}>분류하기!</Button>
+            <Button reset onClick={hanldeClickReset}>리셋!!</Button>
+            <WrapContents>
             <table>
                 <thead>
                     <tr>
@@ -64,6 +101,8 @@ function ClassificationPage() {
                     ))}
                 </tbody>
             </table>
+            </WrapContents>
+            <Wrap>
             <div>
                 <h1>합격자</h1>
                 {
@@ -120,6 +159,7 @@ function ClassificationPage() {
                     </table>
                 }
             </div>
+        </Wrap>
         </div>
     )
 }
