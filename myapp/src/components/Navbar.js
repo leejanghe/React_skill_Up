@@ -24,6 +24,7 @@ function Navbar() {
             <Link to="/study2">재사용컴포넌트</Link>
             <Link to="/study3">데이터 분류 (정렬 기능)</Link>
             <Link to="/study4">페이지네이션</Link>
+            <Link to="/study5">파일 데이터 추가하기</Link>
         </NavWrap>
     )
 }

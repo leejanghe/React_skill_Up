@@ -6,6 +6,7 @@ import DataLength from './router/DataLength';
 import Recycle from './router/Recycle';
 import Classification from './router/Classification';
 import Paginate from './router/Paginate';
+import DataPush from './router/DataPush';
 
 const Rayout = styled.div`
 display: grid;
@@ -44,6 +45,10 @@ function App() {
 
     <Routes>
       <Route path="study4" element={<Paginate/>}/>
+    </Routes>
+
+    <Routes>
+      <Route path="study5" element={<DataPush/>}/>
     </Routes>
 
 
