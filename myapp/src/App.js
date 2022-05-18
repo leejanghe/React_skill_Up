@@ -7,6 +7,7 @@ import Recycle from './router/Recycle';
 import Classification from './router/Classification';
 import Paginate from './router/Paginate';
 import DataPush from './router/DataPush';
+import ChangeNavColor from './router/ChangeNavColor';
 
 const Rayout = styled.div`
 display: grid;
@@ -49,6 +50,10 @@ function App() {
 
     <Routes>
       <Route path="study5" element={<DataPush/>}/>
+    </Routes>
+
+    <Routes>
+      <Route path="study6" element={<ChangeNavColor/>}/>
     </Routes>
 
 
