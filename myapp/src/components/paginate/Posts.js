@@ -1,4 +1,12 @@
 import React from 'react'
+import styled from 'styled-components'
+
+const Wrapper = styled.div`
+width: 100%;
+height: 60%;
+background: #212B36;
+color: #fff;
+`
 
 function Posts({posts, loading}) {
 
@@ -8,7 +16,7 @@ function Posts({posts, loading}) {
 
   return (
     <>
-        <div>
+        <Wrapper>
             {posts.map(({id, title, body})=>(
                 <div>
                     <h3>
@@ -17,7 +25,7 @@ function Posts({posts, loading}) {
                     <p>{body}</p>
                 </div>
             ))}
-        </div>
+        </Wrapper>
     </>
   )
 }
