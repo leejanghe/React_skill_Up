@@ -34,7 +34,13 @@ function ChangeColorNav() {
         <>
             <AlarmText text={text}/>
             <div>
-            <p>베너택스트 변경 &nbsp;&gt;&nbsp; <span>변경할거임</span></p>
+            <p>베너택스트 변경 &nbsp;&gt;&nbsp; <span>{
+            navNum === 1 ? '1번 컨텐츠' 
+            : navNum === 2 ? '2번 컨텐츠'
+            : navNum === 3 ? '3번 컨텐츠'
+            : '4번 컨텐츠'
+            }
+            </span></p>
             </div>
 
             <div>
@@ -44,10 +50,10 @@ function ChangeColorNav() {
                 <p onClick={handleClickD}>D_Contents</p>
             </div>
             <div>
-                    {navNum === 1 ? '1번 컨텐츠' : ''}
-                    {navNum === 2 ? '2번 컨텐츠' : ''}
-                    {navNum === 3 ? '3번 컨텐츠' : ''}
-                    {navNum === 4 ? '4번 컨텐츠' : ''}
+                    {navNum === 1 ? '1번 컨텐츠 입니다 환영합니다.' : ''}
+                    {navNum === 2 ? '2번 컨텐츠 입니다 환영합니다.' : ''}
+                    {navNum === 3 ? '3번 컨텐츠 입니다 환영합니다.' : ''}
+                    {navNum === 4 ? '4번 컨텐츠 입니다 환영합니다.' : ''}
             </div>
         </>
     )
