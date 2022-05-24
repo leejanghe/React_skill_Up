@@ -1,9 +1,13 @@
-import React from 'react'
+import React,{useState} from 'react'
 
 function PushDataPage() {
+
+    
+
+
     return (
         <div>
-            준비중..!
+         <input type="file" />
         </div>
     )
 }

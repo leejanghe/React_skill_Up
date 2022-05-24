@@ -26,6 +26,7 @@ function Navbar() {
             <Link to="/study4">페이지네이션</Link>
             <Link to="/study5">파일 데이터 추가하기</Link>
             <Link to="/study6">네브바 상태 변경</Link>
+            <Link to="/study7">모달 작업</Link>
         </NavWrap>
     )
 }

@@ -8,6 +8,7 @@ import Classification from './router/Classification';
 import Paginate from './router/Paginate';
 import DataPush from './router/DataPush';
 import ChangeNavColor from './router/ChangeNavColor';
+import Modal from './router/Modal';
 
 const Rayout = styled.div`
 display: grid;
@@ -56,6 +57,9 @@ function App() {
       <Route path="study6" element={<ChangeNavColor/>}/>
     </Routes>
 
+    <Routes>
+      <Route path="study7" element={<Modal/>}/>
+    </Routes>
 
       </RayoutContents>
     </Rayout>
