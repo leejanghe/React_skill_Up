@@ -1,5 +1,26 @@
 import React,{useState} from 'react'
 import AlarmText from '../../common/AlarmText'
+import styled from 'styled-components'
+
+const BannerWrap = styled.div`
+background: black;
+width: 500px;
+color: #fff;
+`
+
+const NavContent = styled.div`
+display: flex;
+`
+
+const ContentBox = styled.div`
+width: 500px;
+height: 200px;
+justify-content: center;
+display: flex;
+align-items: center;
+font-size: 1.5rem;
+background: white;
+`
 
 function ChangeColorNav() {
 
@@ -33,7 +54,7 @@ function ChangeColorNav() {
     return (
         <>
             <AlarmText text={text}/>
-            <div>
+            <BannerWrap>
             <p>베너택스트 변경 &nbsp;&gt;&nbsp; <span>{
             navNum === 1 ? '1번 컨텐츠' 
             : navNum === 2 ? '2번 컨텐츠'
@@ -41,20 +62,20 @@ function ChangeColorNav() {
             : '4번 컨텐츠'
             }
             </span></p>
-            </div>
+            </BannerWrap>
 
-            <div>
+            <NavContent>
                 <p onClick={handleClickA}>A_Contents</p>
                 <p onClick={handleClickB}>B_Contents</p>
                 <p onClick={handleClickC}>C_Contents</p>
                 <p onClick={handleClickD}>D_Contents</p>
-            </div>
-            <div>
+            </NavContent>
+            <ContentBox>
                     {navNum === 1 ? '1번 컨텐츠 입니다 환영합니다.' : ''}
                     {navNum === 2 ? '2번 컨텐츠 입니다 환영합니다.' : ''}
                     {navNum === 3 ? '3번 컨텐츠 입니다 환영합니다.' : ''}
                     {navNum === 4 ? '4번 컨텐츠 입니다 환영합니다.' : ''}
-            </div>
+            </ContentBox>
         </>
     )
 }
