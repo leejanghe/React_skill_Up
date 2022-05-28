@@ -4,16 +4,22 @@ import styled from 'styled-components'
 
 const BannerWrap = styled.div`
 background: black;
-width: 500px;
+width: 1000px;
 color: #fff;
 `
 
 const NavContent = styled.div`
 display: flex;
+background: gray;
+/* margin: 5px; */
+width: 1000px;
+justify-content: space-around;
+cursor: pointer;
+
 `
 
 const ContentBox = styled.div`
-width: 500px;
+width: 1000px;
 height: 200px;
 justify-content: center;
 display: flex;
