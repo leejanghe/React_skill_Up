@@ -8,6 +8,7 @@ function PushDataPage() {
     return (
         <div>
          <input type="file" />
+         보류..
         </div>
     )
 }
