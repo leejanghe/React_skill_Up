@@ -7,6 +7,8 @@ const Wrapblack = styled.div`
   background: rgba(0,0,0,0.5);
   position: fixed; padding: 20px;
   z-index: 999;
+  top:0;
+  left:0;
   /* justify-content: center; */
 `
 
@@ -23,7 +25,7 @@ background : red;
 width: 50%;
 height: 50%; */
 width: 40%;
-  position: fixed;
+position: fixed;
 top: 50%;
 left: 50%;
 -webkit-transform: translate(-50%, -50%);
@@ -36,7 +38,7 @@ transform: translate(-50%, -50%);
   padding: 20px;
 `
 
-function ModalForm({id, title, contents,setShowModal,data}) {
+function ModalForm({id, title, contents,setShowModal,detail}) {
     console.log('modal',id, title, contents)
     return (
         <Wrapblack>
@@ -44,6 +46,7 @@ function ModalForm({id, title, contents,setShowModal,data}) {
             <h1>{id}</h1>
             <p>{title}</p>
             <p>{contents}</p>
+            <p>{detail}</p>
             <button onClick={()=>setShowModal(false)}>닫기</button>
         </WrapModal>
         </Wrapblack>

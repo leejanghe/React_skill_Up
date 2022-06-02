@@ -41,6 +41,7 @@ function DataForm({data}) {
                                 id={data[a].id}
                                 title={data[a].title}
                                 contents={data[a].contents}
+                                detail={data[a].detail}
                                 setShowModal={setShowModal}
                                 /> : null
                             }
