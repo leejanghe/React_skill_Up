@@ -11,11 +11,9 @@ color: #fff;
 const NavContent = styled.div`
 display: flex;
 background: gray;
-/* margin: 5px; */
 width: 1000px;
 justify-content: space-around;
 cursor: pointer;
-
 `
 
 const ContentBox = styled.div`
