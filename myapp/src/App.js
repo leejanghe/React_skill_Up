@@ -9,6 +9,7 @@ import Paginate from './router/Paginate';
 import DataPush from './router/DataPush';
 import ChangeNavColor from './router/ChangeNavColor';
 import Modal from './router/Modal';
+import RandomColor from './router/RandomColor';
 
 const Rayout = styled.div`
 display: grid;
@@ -59,6 +60,10 @@ function App() {
 
     <Routes>
       <Route path="study7" element={<Modal/>}/>
+    </Routes>
+
+    <Routes>
+      <Route path="study8" element={<RandomColor/>}/>
     </Routes>
 
       </RayoutContents>
