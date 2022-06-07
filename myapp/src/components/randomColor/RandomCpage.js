@@ -1,5 +1,38 @@
 import React,{useState} from 'react'
 import AlarmText from '../../common/AlarmText'
+import styled from 'styled-components'
+
+const WrapDiv = styled.div`
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .colorBox{
+        margin-top: 30px;
+        background: red;
+        width: 100%;
+        height: 300px;
+        border-radius: 20px;
+        z-index: 9;
+    }
+`
+
+const Btn = styled.button`
+    font-size: 20px;
+    background: darkblue;
+    color: white;
+    padding: 1.5rem;
+    border-radius: 15px;
+    outline: none;
+    margin-top: 20px;
+    &:active{
+        transform: scale(.99);
+        background-color: red;
+    }
+`
+
 
 
 function RandomCpage() {
@@ -28,7 +61,7 @@ function RandomCpage() {
 
     const handleRandomClick = () => {
         console.log(Math.floor(Math.random()*colors.length))
-        const randomColor = document.querySelector('body')
+        const randomColor = document.querySelector('colorBox')
         const color1 = colors[Math.floor(Math.random()*colors.length)]
         const color2 = colors[Math.floor(Math.random()*colors.length)]
         randomColor.style.background = `linear-gradient(0.25turn, ${color1}, ${color2})`;
@@ -42,10 +75,13 @@ function RandomCpage() {
     }]
 
     return (
-        <div>
+        <>
             <AlarmText text={text}/>
-            <button onClick={handleRandomClick}>Give me Color</button>
-        </div>
+        <WrapDiv>
+            <Btn onClick={handleRandomClick}>Give me Color</Btn>
+            <div className="colorBox"></div>
+        </WrapDiv>
+        </>
     )
 }
 
