@@ -11,7 +11,7 @@ const WrapDiv = styled.div`
     flex-direction: column;
     .colorBox{
         margin-top: 30px;
-        background: red;
+        background: #fff;
         width: 100%;
         height: 300px;
         border-radius: 20px;
@@ -61,7 +61,7 @@ function RandomCpage() {
 
     const handleRandomClick = () => {
         console.log(Math.floor(Math.random()*colors.length))
-        const randomColor = document.querySelector('colorBox')
+        const randomColor = document.querySelector('.colorBox')
         const color1 = colors[Math.floor(Math.random()*colors.length)]
         const color2 = colors[Math.floor(Math.random()*colors.length)]
         randomColor.style.background = `linear-gradient(0.25turn, ${color1}, ${color2})`;
