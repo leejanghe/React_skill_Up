@@ -40,6 +40,8 @@ transform: translate(-50%, -50%);
 
 function ModalForm({id, title, contents,setShowModal,detail}) {
     console.log('modal',id, title, contents)
+
+
     return (
         <Wrapblack>
         <WrapModal>

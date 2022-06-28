@@ -20,10 +20,14 @@ function DataForm({data}) {
     console.log('data',data)
 
     const [showModal, setShowModal] = useState(false);
+    const [modalVisbleId, setModalVisbleId] = useState('')
+
 
     const handleClick = (id) => {
         // alert(`${id} click`)
         setShowModal(true)
+        console.log('id@@@@',id)
+        setModalVisbleId(id)
     }
 
 
@@ -35,16 +39,24 @@ function DataForm({data}) {
                             <p>{item.contents}</p>
                             <p onClick={()=>handleClick(item.id)}>자세히 보기</p>
                             {
-                                showModal === true ? 
+                              modalVisbleId === item.id && showModal === true ? 
                                 <ModalForm 
                                 // data={data[a]}
-                                id={data[a].id}
-                                title={data[a].title} 
-                                contents={data[a].contents}
-                                detail={data[a].detail}
+                                id={item.id}
+                                title={item.title} 
+                                contents={item.contents}
+                                detail={item.detail}
                                 setShowModal={setShowModal}
                                 /> : null
                             }
+                            
+
+
+                            {/* <ModalForm 
+                            id={item.id}
+                            modalVisbleId={modalVisbleId}
+                            setModalVisbleId={setModalVisbleId} */}
+                            {/* /> */}
                         </div>               
                     ))}    
                 </Wrapper>
